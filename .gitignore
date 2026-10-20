@@ -1,0 +1,15 @@
+# Generated files and local player data
+__pycache__/
+*.py[cod]
+*.log
+*.dmp
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.exe
+.DS_Store
+Thumbs.db
+/out/
+/dist/
+/build-output/
