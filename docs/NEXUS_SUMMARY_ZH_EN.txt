@@ -1,3 +1,3 @@
-适配1.1.1：1503宝箱、147区域任务、78谜题、84小游戏及资源/动物标记。支持存档同步、筛选和11语自动识别。基于MnM Radar，经paroxis授权。
+适配1.1.1：1503个宝箱、147个区域任务、78个谜题、84个小游戏及资源/动物标记。支持存档同步、分类筛选和11种语言自动识别。基于MnM Radar，经paroxis授权继续开发。
 
 For 1.1.1: 1,503 chests, 147 quests, 78 puzzles, 84 minigames, resources/wildlife. Save sync, filters, 11-language auto-detection. Based on MnM Radar by paroxis, with permission.

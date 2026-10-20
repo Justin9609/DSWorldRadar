@@ -1,29 +1,38 @@
 # 构建与依赖
 
-## C# 存档同步器
+## C#存档同步器
 
-运行 source/dlls/sync/bootstrap.ps1 时，游戏环境会调用 Windows 自带的 .NET Framework csc.exe 编译 MnMChestSaveSync.cs。
-审核时可使用 build/Build_SaveSync.ps1 单独编译；此脚本不会执行生成的 EXE，也不会启动游戏。
-编译参数与现行 bootstrap.ps1 对应：/nologo /optimize+ /target:exe /platform:x64 /reference:System.Core.dll /reference:System.Xml.dll。
-运行时使用 Windows winsqlite3.dll，并读取本地存档格式。没有额外 NuGet 包。
+source/dlls/sync/bootstrap.ps1会调用Windows自带的.NET Framework csc.exe，编译MnMChestSaveSync.cs。
 
-## WCX 2802 辅助桥
+审核时可通过build/Build_SaveSync.ps1单独编译。该脚本只生成EXE，不执行同步器或启动游戏，编译参数与现行bootstrap.ps1一致：
 
-source/native/wcxbridge.c 与 wcx_resolver.h 为可取得的现行源码，resolver_test_api.c 为主机定位器测试入口。
-历史构建记录使用 Python ziglang 提供的 Zig 0.17.0，目标 x86_64-windows-gnu。
-build/Build_WCX.ps1 保留对应命令：
+```text
+/nologo /optimize+ /target:exe /platform:x64 /reference:System.Core.dll /reference:System.Xml.dll
+```
 
+运行时通过Windows的winsqlite3.dll读取本地存档进度，无额外NuGet依赖。
+
+## WCX 2802辅助桥
+
+现有源码为source/native/wcxbridge.c和wcx_resolver.h，resolver_test_api.c用于主机侧定位器测试。
+
+历史构建记录使用Python的ziglang包提供的Zig 0.17.0，目标为x86_64-windows-gnu。build/Build_WCX.ps1保留了对应命令：
+
+```sh
 python -m ziglang cc -target x86_64-windows-gnu -O2 -shared -Wall -Wextra -Werror -Wl,--strip-all wcxbridge.c -o wcxbridge.dll
+```
 
-编译器/SDK 差异可能改变输出字节；本次仅确认留存构建产物与发布 DLL 完全相同，没有宣称本轮重新执行 Windows 构建或保证可复现完全相同的 DLL。
-其余四个 DLL 缺少完整源码，不能从本包重建。
+本次确认了留存构建产物与发布DLL完全一致，没有重新执行Windows构建。编译器或SDK不同，生成文件的字节也可能不同，因此不保证重新构建后得到相同哈希。
 
-## 脚本与 UE4SS
+其余4个DLL缺少完整源码，暂时无法从本仓库重建。
 
-PowerShell 目标环境为 Windows PowerShell 5.1；离线测试脚本原使用 PowerShell 7.4.6。
-Lua 文件由配套 UE4SS 加载，无单独编译步骤；PS 文件内的 Add-Type C# 实现已保留在原脚本中。
-配套加载器为 UE4SS v3.0.1 Beta #0，提交 1c1a1497f942c707f47ba668db75b25e86f6c08a。
-上游项目：https://github.com/UE4SS-RE/RE-UE4SS 。本包不提供或声称重建 UE4SS 源码。
+## 脚本与UE4SS
+
+运行环境为Windows PowerShell 5.1；原离线测试环境使用PowerShell 7.4.6。Lua文件由配套UE4SS直接加载。PS文件内的Add-Type C#代码仍保留在原脚本中。
+
+配套加载器为UE4SS v3.0.1 Beta #0，提交1c1a1497f942c707f47ba668db75b25e86f6c08a。
+
+上游项目：[RE-UE4SS](https://github.com/UE4SS-RE/RE-UE4SS)。本仓库未收录UE4SS源码，也不提供其源码重建工程。
 
 ---
 

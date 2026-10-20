@@ -1,31 +1,28 @@
-# DSWorldRadar 1.1 — 版主代码审核资料
+# DSWorldRadar 1.1｜版主代码审核资料
 
-对应游戏：《龙之剑：觉醒》1.1.1，Steam / Windows x64。
-本包供代码和二进制审核使用，不是玩家安装包。
+对应游戏：《龙之剑：觉醒》1.1.1，Steam／Windows x64。
+此目录用于源码和二进制审核，玩家安装包请到项目Releases下载。
 
 ## 审核入口
 
-- source/：与当前发布包逐字节一致的 PowerShell、C#、Lua 源码，以及可取得的 WCX 2802 原生 C/H 源码。
-- reference_mod/：从当前不含 UE4SS 安装包原样提取的完整 MOD 文件，含五个现行 DLL、数据和语言文件，供对照分析。
-- SOURCE_BINARY_MAP.json：源码对应关系、原生组件来源说明和源码缺口。
-- build/：仅编译、不启动游戏或同步器的构建脚本。
-- docs/：依赖、敏感行为和授权状态说明。
-- tests/：现有离线测试脚本；本次未把此前测试算作新执行。
-- release_metadata/：两个正式安装包的名称、SHA-256 和包信息。
-- tools/verify_review_bundle.py：用 Python 标准库核对文件校验和及源码对应关系。
+- source/：与发布包逐字节一致的PowerShell、C#、Lua源码，以及可取得的WCX 2802原生C/H源码。
+- reference_mod/：从不含UE4SS安装包中原样提取的完整MOD文件，含5个DLL、数据和语言文件，供逐文件对照。
+- SOURCE_BINARY_MAP.json：源码对应关系、原生组件说明和缺失源码的情况。
+- build/：仅编译的构建脚本，不启动游戏或同步器。
+- docs/：依赖、实际运行行为和授权说明。
+- tests/：留存的离线测试脚本，执行情况见目录内说明。
+- release_metadata/：两个正式安装包的名称、SHA-256和包信息。
+- tools/verify_review_bundle.py：使用Python标准库检查文件校验和及源码对应关系。
 
-## 源码完整性说明
+## 源码完整性
 
-现行的 8 个运行源码文件已包含，WCX 2802 C/H 源码也已包含。
-main.dll、main_original.dll、wcbridge.dll、dqbridge.dll 的完整原生源码目前不可得。
-其中 main_original.dll 是 MnM Radar 派生核心，原作者的 C++ 源码仍未收到。
-其余三个组件的源码/工程在目前可取得的项目记录中未找到；不将它们冒称为有完整源码的第三方或自编译组件。
+已收录现行的8个运行源码文件，以及WCX 2802的C/H源码。
 
-因此，本包不能宣称为全部原生 DLL 均可重建的完整 C++ 工程。
-没有用推测或重写代码冒充缺失源码。对应 DLL 原文件和哈希均保留供独立分析。
+`main.dll`、`main_original.dll`、`wcbridge.dll`、`dqbridge.dll`的完整原生源码目前不可得。其中，`main_original.dll`是MnM Radar派生核心，原作者的C++源码仍未收到；其余3个组件的源码或工程，尚未在可取得的项目记录中找到。
 
-未包含游戏 EXE、PAK、玩家存档、解密缓存、个人运行日志或私人邮件全文。
-UE4SS 本体未重复打入此包；所用版本、提交和哈希已记录。
+因此，目前无法从这些资料重建全部原生DLL。缺失源码的组件保留了实际发布的DLL和哈希，供独立分析，没有用推测或重写的代码代替原始源码。
+
+此目录不含游戏EXE、PAK、玩家存档、解密缓存、个人运行日志或私人邮件全文。UE4SS本体也未重复收录，所用版本、提交和哈希均已记录。
 
 ---
 

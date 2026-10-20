@@ -1,24 +1,25 @@
 # 行为与授权说明
 
-## 需要审核的实际行为
+## 实际运行行为
 
-- Lua/启动脚本会以隐藏窗口启动 PowerShell，并为子进程使用 -ExecutionPolicy Bypass；不是修改系统全局执行策略。
-- bootstrap.ps1 在本机编译 C# 同步辅助程序，并启动或管理本 MOD 的同步进程。
-- C# 辅助程序包含现有存档解密参数，派生密钥后读取 SQLCipher 格式存档，在 MOD 缓存中处理临时解密副本，并通过 winsqlite3.dll 查询进度。
-- live_chest_watcher.ps1 包含 Add-Type C# 代码，使用 OpenProcess、ReadProcessMemory、WriteProcessMemory 访问游戏中的雷达和完成状态。
-- 语言脚本会更新雷达语言文件；现有原生整合包含固定偏移访问和界面修改。
-- WCX C 源码包含运行时函数定位、VirtualAlloc/VirtualProtect 及跳转补丁，用于取得游戏原生计数通知。
+- Lua和启动脚本会通过隐藏窗口启动PowerShell，并为子进程使用`-ExecutionPolicy Bypass`。该参数用于子进程，不会修改系统全局执行策略。
+- bootstrap.ps1会在本机编译C#同步辅助程序，并启动或管理本MOD的同步进程。
+- C#辅助程序包含现有存档解密参数，派生密钥后读取SQLCipher格式存档，在MOD缓存中处理临时解密副本，再通过winsqlite3.dll查询进度。
+- live_chest_watcher.ps1内含通过Add-Type编译的C#代码，使用OpenProcess、ReadProcessMemory和WriteProcessMemory访问游戏中的雷达及完成状态。
+- 语言脚本会更新雷达语言文件。现有原生整合仍使用固定偏移访问和界面补丁。
+- WCX C源码包含运行时函数定位、VirtualAlloc/VirtualProtect和跳转补丁，用于取得游戏原生计数通知。
 
-以上为审核对象说明，不是安全软件豁免请求。对于没有源码的 DLL，仅提供当前二进制及哈希，不作缺乏依据的完整源码行为声明。
+以上列出实际需要审核的行为，不作为安全软件豁免的依据。没有源码的DLL仅提供现行二进制及哈希，无法据此作出完整的源码行为说明。
 
-## MnM Radar 关系
+## 与MnM Radar的关系
 
-本 MOD 实际包含 MnM Radar 派生原生核心，并非仅引用算法。
-原作者 paroxis 在维护者提供的邮件中同意以 DSWorldRadar 名义独立发布，要求保留 MnM Radar 基础署名，并允许使用点位和 ID 数据。
-原作者也建议不要通过固定 RVA 修补其 DLL，而应重新实现所需功能；当前源码级替代尚未完成，固定偏移/界面整合仍存在。
-原作者曾提出可尝试公开源码；目前尚未收到 C++ 源码。此许可不被表述为通用开源许可证。
-THIRD_PARTY_NOTICES.txt 与发布包保持原样；没有把原 MOD 页面列为依赖链接。
-完整私人邮件未附入本代码包，避免夹带不必要的个人通信内容。
+本MOD实际使用了MnM Radar派生原生核心，并非只引用算法。
+
+原作者paroxis在邮件中同意以DSWorldRadar名义独立发布，要求保留MnM Radar署名，并允许沿用点位和ID数据。他也建议重新实现所需功能，避免通过固定RVA修补其DLL。目前源码级替代尚未完成，固定偏移访问和界面整合仍在使用。
+
+原作者曾表示可以尝试公开源码，目前尚未收到C++源码。这份邮件授权未被表述为通用开源许可。
+
+THIRD_PARTY_NOTICES.txt保留发布包中的原文，原MOD页面未被列为安装依赖。私人邮件全文未附入代码包。
 
 ---
 

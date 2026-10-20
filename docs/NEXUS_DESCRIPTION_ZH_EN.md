@@ -1,107 +1,117 @@
 **DSWorldRadar 1.1｜中文说明**
 
-DSWorldRadar 是《龙之剑：觉醒》的探索雷达 MOD，可显示宝箱、探索活动、资源和动物等目标，支持分类筛选，并结合当前存档与游戏事件同步已支持目标的完成状态。
+DSWorldRadar是《龙之剑：觉醒》的探索雷达MOD，可显示宝箱、探索活动、资源和动物等标记，支持分类筛选，并根据存档和游戏事件同步宝箱及已支持活动的完成状态。
+
+**GitHub下载与源码**
+
+- 完整安装包：[DSWorldRadar 1.1下载页（适配游戏1.1.1）](https://github.com/Justin9609/DSWorldRadar/releases/tag/v1.1)。包含UE4SS和不包含UE4SS两个版本，安装其中一个即可。
+- 现有源码与审核资料：[GitHub项目仓库](https://github.com/Justin9609/DSWorldRadar)。各组件的源码情况及缺失部分见仓库README。
 
 **版本与运行要求**
 
-- MOD 版本：**1.1**。
-- 适配游戏版本：**1.1.1**，Steam / Windows x64。
-- 配套 UE4SS：实验版 **v3.0.1 Beta #0**，提交 **1c1a1497**，采用嵌套目录结构。
-- 需要 Windows PowerShell、.NET Framework 自带的 C# 编译器，以及 MOD 文件夹写入权限。存档同步程序会在首次启动时于本机编译，玩家无需安装 Python。
+- MOD版本：**1.1**。
+- 适配游戏版本：**1.1.1**，Steam／Windows x64。
+- 配套UE4SS：实验版**v3.0.1 Beta #0**，提交**1c1a1497**，采用嵌套目录结构。
+- 运行需要Windows PowerShell、.NET Framework自带的C#编译器，以及MOD目录的写入权限。存档同步程序会在首次启动时自动编译，无需安装Python。
 
-游戏版本标注依据 Steam 10 月 15 日的 1.1.1 更新公告。运行文件的完整构建指纹见包内 GAME_VERSION_ZH_EN.txt；文件资源中的 5.3.2.0 为 UE 引擎版本，与游戏版本分别记录。其他 UE4SS 构建尚未验证能否替代配套版本。
+游戏版本按Steam10月15日发布的1.1.1更新公告标注。包内GAME_VERSION_ZH_EN.txt记录了所核对的运行文件信息；文件属性中的5.3.2.0对应UE引擎版本。其他UE4SS版本的兼容性尚未验证。
 
 **主要功能**
 
-- 收录 **1,503 个探索宝箱**和 **147 个区域任务**。
-- 84 个小游戏：飞行 34、地鼠 40、波动 10。
-- 78 个谜题：踏板 48、滑块 29、石像 1。
-- 食材、矿石、结晶、动物及其他兴趣点标记。
-- 宝箱及已支持活动的完成状态同步，载入、切换存档后按对应进度刷新。
-- 分类筛选、雷达总开关、最大显示距离、标记大小和文字显示设置。
-- 11 种文本语言及自动语言识别。
+- 收录**1503个探索宝箱**和**147个区域任务**。
+- 84个小游戏：飞行34个、地鼠40个、波动10个。
+- 78个谜题：踏板48个、滑块29个、石像1个。
+- 可标记食材、矿石、结晶、动物及其他兴趣点。
+- 载入或切换存档后，刷新宝箱及已支持活动的完成状态。
+- 支持分类筛选、雷达总开关，以及显示距离、标记大小和文字设置。
+- 支持11种文本语言，可自动识别游戏语言。
 
-以上为收录总量，并非当前存档尚未完成的数量。谜题和小游戏的奖励宝箱已包含在 1,503 个宝箱总数中，无需重复相加。
+以上数字是各类内容的收录总数。谜题和小游戏的奖励宝箱已包含在1503个宝箱中。
 
-**1.1 更新内容**
+**1.1更新内容**
 
-- 适配游戏 1.1.1，更新宝箱数据并校正部分点位坐标。
-- 优化不同存档的完成度同步，以及载入和切换存档后的刷新。
-- 改善宝箱与区域任务的完成状态识别。
+- 适配游戏1.1.1，更新宝箱数据，校正部分点位坐标。
+- 改进不同存档之间的完成度同步，以及读档、切换存档后的刷新。
+- 改进宝箱和区域任务的完成状态识别。
 - 调整自动保存、事件处理和失败重试，提高同步稳定性。
-- 优化后台同步与日志管理，清理不再使用的辅助文件。
-- 统一安装包命名和中英文说明，保留 11 种语言及自动语言识别。
+- 整理后台同步和日志管理，移除不再使用的辅助文件。
+- 统一安装包命名与中英文说明，保留11种语言和自动识别。
 
 **下载选择**
 
-两个版本的雷达功能相同，只需安装其中一个：
+两个版本的雷达功能相同，安装其中一个即可：
 
-- **包含 UE4SS：**DSWorldRadar_v1.1_Game_v1.1.1_With_UE4SS.zip。适合尚未安装 UE4SS 的环境，包含配套加载器及启用雷达的配置。
-- **不包含 UE4SS：**DSWorldRadar_v1.1_Game_v1.1.1_Without_UE4SS.zip。适合已有兼容 UE4SS 的玩家，沿用现有加载器配置和其他 MOD。
+- **包含UE4SS：**DSWorldRadar_v1.1_Game_v1.1.1_With_UE4SS.zip。适合尚未安装UE4SS的玩家，包含配套加载器和雷达启用配置。
+- **不包含UE4SS：**DSWorldRadar_v1.1_Game_v1.1.1_Without_UE4SS.zip。适合已安装兼容UE4SS的玩家，沿用现有加载器及MOD配置。
 
 **安装与更新**
 
 1. 完全退出游戏，解压所选压缩包。
-2. 将包内 **DS** 文件夹合并到游戏根目录中已有的 DS 文件夹。
-3. 确认最终 MOD 位置为：
+2. 将包内的**DS**文件夹合并到游戏根目录下已有的DS文件夹。
+3. 最终安装位置应为：
 
 DS/Binaries/Win64/ue4ss/Mods/DSWorldRadar/
 
-请勿多套一层 DS/DS 或 ue4ss/ue4ss。已有 UE4SS 的玩家更新时请选择不包含 UE4SS 版，保留现有设置和进度缓存，无需为升级清空缓存。
+合并后检查目录层级，避免出现DS/DS或ue4ss/ue4ss。已安装UE4SS的玩家更新时，请选不包含UE4SS版，并保留现有设置和进度缓存。
 
-使用不包含 UE4SS 版时，在现有加载配置中启用 DSWorldRadar。若使用 ue4ss/Mods/mods.txt，添加或修改以下一行，并保留其他条目：
+使用不包含UE4SS版时，需要在现有加载配置中启用DSWorldRadar。若使用ue4ss/Mods/mods.txt，添加或修改以下一行，并保留其他条目：
 
 DSWorldRadar : 1
 
-若使用 mods.json，则在原有配置中添加或启用 DSWorldRadar，并保留其他 MOD 条目。启动前请停用原版 MnMRadar 和重复安装的 DSWorldRadar。**无需另行安装原版 MnM Radar。**
+如果使用mods.json，在原有配置中添加或启用DSWorldRadar，并保留其他MOD条目。启动前，请停用原版MnMRadar和重复安装的DSWorldRadar。**无需另行安装原版MnM Radar。**
 
 **使用方法**
 
-载入存档后，按 **ESC**，点击菜单底部的 **Radar／雷达** 入口。在面板中选择分类，调整显示距离、标记大小及文字设置。所有语言下的面板标题均为 **DSWorldRadar**。
+载入存档后按**ESC**，点击菜单底部的**Radar／雷达**，即可打开面板。在面板中选择分类，并调整显示距离、标记大小和文字设置。所有语言下的面板标题均为**DSWorldRadar**。
 
 **语言支持**
 
 韩语、英语、日语、简体中文、繁体中文、德语、法语、西班牙语、巴西葡萄牙语、俄语和泰语。
 
-游戏内有对应文本的名称采用相应语种的游戏原文，雷达自定义界面文本单独翻译。自动识别优先跟随游戏保存的文本语言，再检查启动参数、配置中的语言文本及 Steam 语言；没有识别到支持的语言时使用英文。
+游戏中已有对应文本的名称，沿用相应语种的游戏原文；雷达自定义界面文字单独翻译。自动识别优先读取游戏保存的文本语言，再依次检查启动参数、配置中的语言文本和Steam语言；无法识别支持的语言时使用英文。
 
-修改游戏文本语言后，请完全退出并重新启动游戏。韩、日、德、西班牙、巴西葡萄牙、俄、泰语的原生总开关目前保留 OFF / ON。全部 11 种语言的游戏内字体覆盖和长文本排版尚未逐一验证。
+更改游戏文本语言后，需要完全退出并重新启动游戏。韩语、日语、德语、西班牙语、巴西葡萄牙语、俄语和泰语的原生总开关目前仍显示OFF／ON。11种语言的游戏内字体显示和长文本排版尚未逐一验证。
 
 **同步与兼容说明**
 
-读档、切换存档或触发自动保存后，完成度同步可能需要短暂等待。缺少当前存档识别信息时，可能暂按最近写入的存档刷新；若显示与当前进度不一致，请提供相关日志反馈。
+读档、切换存档或自动保存后，同步可能稍有延迟。无法识别当前存档时，可能会暂时读取最近写入的存档进度。如果显示与实际进度不符，请附上相关日志反馈。
 
 **存档访问与技术说明**
 
-MOD 会启动 PowerShell／C# 同步程序，读取本地加密存档，并在 MOD 自己的缓存目录中处理临时解密副本；同时会读写游戏进程中的雷达状态。进程访问、脚本执行及本机编译行为可能触发安全软件的启发式提示。
+MOD会启动PowerShell／C#同步程序，读取本地加密存档，并在MOD缓存目录内处理临时解密副本；同时读写游戏进程中的雷达状态。这些进程访问、脚本执行和本机编译操作，可能触发安全软件的启发式提示。
 
-当前原生整合仍包含固定偏移访问和界面补丁，尚未完成源码级替代。1.1 的版本号不表示原生核心已经重写。
+原生核心尚未重写，当前仍使用固定偏移访问和界面补丁。
 
-**关于 MnM Radar 与鸣谢**
+**关于MnM Radar与鸣谢**
 
-DSWorldRadar 基于 **paroxis** 制作的 **MnM Radar**，已获得原作者许可继续开发，并作为独立 MOD 发布。
+DSWorldRadar基于**paroxis**制作的**MnM Radar**，经原作者许可继续开发，并以独立MOD发布。
 
-paroxis 在邮件中表示，他已停止游玩并不再维护 MnM Radar；他支持以新维护者名义单独发布 DSWorldRadar，保留原作者署名，并允许继续使用原雷达的点位和 ID 数据。
+paroxis已停止游玩并不再维护MnM Radar。他在邮件中支持由新维护者独立发布DSWorldRadar，要求保留原作者署名，并允许沿用点位和ID数据。
 
-当前版本仍保留基于 MnM Radar 的原生核心。原作者曾表示可以尝试公开源码，目前已提出索取请求，尚未收到 C++ 源码。
+目前仍使用MnM Radar派生的原生核心。原作者曾表示可以尝试公开源码；我们已提出索取请求，目前尚未收到C++源码。
 
-- 原始雷达基础：**paroxis / MnM Radar**。
+- 原始雷达：**paroxis / MnM Radar**。
 - 后续开发与打包：**zouzx1996**。
-- UE4SS：**Narknon 及 RE-UE4SS 项目贡献者**，包内保留相关许可证及声明。
+- UE4SS：**Narknon及RE-UE4SS项目贡献者**。包内保留相关许可证和声明。
 
-DSWorldRadar 的问题反馈请联系本项目维护者。
+DSWorldRadar的问题请向本项目维护者反馈。
 
 **问题反馈**
 
-请提供 MOD 版本、游戏版本、游戏语言、问题截图，以及相关 UE4SS、live_chest_watcher 和 reload_watcher 日志。完成度问题请说明是在启动、读档、切换存档还是开箱后出现。
+请附上MOD版本、游戏版本、游戏语言、问题截图，以及相关的UE4SS、live_chest_watcher和reload_watcher日志。完成度问题请说明发生在启动、读档、切换存档还是开箱之后。
 
-请勿在公开反馈中上传存档数据库或解密缓存文件。
+公开反馈时，请勿上传存档数据库或解密缓存文件。
 
 ---
 
 **DSWorldRadar 1.1｜English Description**
 
 DSWorldRadar is an exploration radar for DragonSword: Awakening. It displays chests, activities, resources and wildlife, with category filters and completion tracking for supported objectives using your current save and game events.
+
+**GitHub downloads and source**
+
+- Installation packages: [DSWorldRadar 1.1 downloads for game 1.1.1](https://github.com/Justin9609/DSWorldRadar/releases/tag/v1.1). With UE4SS and Without UE4SS packages are available; install one.
+- Available source and review materials: [GitHub repository](https://github.com/Justin9609/DSWorldRadar). See its README for source coverage and remaining gaps.
 
 **Versions and requirements**
 
