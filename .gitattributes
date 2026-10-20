@@ -1,0 +1,2 @@
+# Preserve exact runtime bytes and checksums, including Windows source line endings.
+* -text
