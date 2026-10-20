@@ -1,0 +1,16 @@
+[
+  {
+    "file_name": "DSWorldRadar_v1.1_Game_v1.1.1_Without_UE4SS.zip",
+    "bytes": 603841,
+    "sha256": "17ae328dadf63d39d455e0fe92f1357fd53c6e4b2a09265ec34b36192e6469f4",
+    "mod_version": "1.1",
+    "target_game_version": "1.1.1"
+  },
+  {
+    "file_name": "DSWorldRadar_v1.1_Game_v1.1.1_With_UE4SS.zip",
+    "bytes": 7761460,
+    "sha256": "3d2d306cf05441c71daf9a5f28001fba3b570af91bdf12f0b03f3ef98e93f045",
+    "mod_version": "1.1",
+    "target_game_version": "1.1.1"
+  }
+]

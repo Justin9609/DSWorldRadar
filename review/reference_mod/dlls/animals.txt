@@ -1,0 +1,31 @@
+# Especes suivies en temps reel par DSMarmotRadar
+#
+# Format : chemin/complet/de/la/classe|Libelle|R,G,B
+#   - couleurs entre 0.0 et 1.0
+#   - '#' en debut de ligne pour commenter
+#   - aucune recompilation necessaire, il suffit de relancer le jeu
+#
+# Ces classes ont ete relevees dans un dump "Dump all actors to file"
+# (onglet Dumpers d'UE4SS). Pour en ajouter une, refais un dump pres de
+# l'animal voulu et cherche une ligne /Game/Design/DsCharacter/Animal/...
+#
+# Rappel : un animal n'existe en memoire que dans le rayon de streaming,
+# environ 465 m sur ce jeu. Au-dela, aucun marqueur ne peut s'afficher.
+
+/Game/Design/DsCharacter/Animal/Fox/World/DsMon_fox_World.DsMon_fox_World_C|Renard|0.95,0.45,0.15
+/Game/Design/DsCharacter/Animal/Rabbit/DsMon_Rabbit.DsMon_Rabbit_C|Lapin|0.85,0.80,0.72
+/Game/Design/DsCharacter/Animal/Goose/World/DsMon_Goose_World.DsMon_Goose_World_C|Oie|0.90,0.90,0.95
+/Game/Design/DsCharacter/Animal/Goose/World/DsMon_Goose_Swim.DsMon_Goose_Swim_C|Oie|0.70,0.85,0.95
+/Game/Design/DsCharacter/Animal/Fish/Trout/DsMon_Trout_Interaction.DsMon_Trout_Interaction_C|Truite|0.45,0.75,0.85
+# Retire : le scarabee rhinoceros n'est qu'un decor anime, attele a une
+# charrette, sans aucune interaction possible. Il polluait le radar.
+# /Game/Design/DsCharacter/MotionActor/Rhinoceros_Beetle/MA_Rhinoceros_Beetle.MA_Rhinoceros_Beetle_C|Scarabee|0.55,0.40,0.25
+/Game/Design/DsCharacter/Animal/Squirrel/DsMon_Squirrel.DsMon_Squirrel_C|Ecureuil|0.72,0.38,0.18
+/Game/Design/DsCharacter/Animal/Boar/World/DsMon_Boar_World.DsMon_Boar_World_C|Sanglier|0.72,0.45,0.30
+/Game/Design/DsCharacter/Animal/Fish/SilverWing/DsMon_SilverWing_Interaction.DsMon_SilverWing_Interaction_C|Aile d'argent|0.75,0.85,0.92
+
+# Le saumon n'a pas encore ete croise : cette ligne est deduite par analogie
+# avec la truite et l'aile d'argent, elle n'est PAS verifiee. Si elle est
+# fausse, elle ne fait rien -- aucune classe ne lui correspondra. Le journal
+# [espece] donnera le vrai chemin au premier saumon rencontre.
+/Game/Design/DsCharacter/Animal/Fish/Salmon/DsMon_Salmon_Interaction.DsMon_Salmon_Interaction_C|Saumon|0.95,0.55,0.45

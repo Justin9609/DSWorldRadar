@@ -1,0 +1,116 @@
+{
+  "runtime_sources": [
+    {
+      "source": "source/dlls/sync/MnMChestSaveSync.cs",
+      "runtime_reference": "reference_mod/dlls/sync/MnMChestSaveSync.cs",
+      "sha256": "f3b301189c1d11242bcda9f577094306fe30f38b848173b8925d688bc814281a",
+      "comparison": "byte-identical to current installer"
+    },
+    {
+      "source": "source/dlls/sync/bootstrap.ps1",
+      "runtime_reference": "reference_mod/dlls/sync/bootstrap.ps1",
+      "sha256": "82a4ee4e653c850a38d8cd54b8b2d2fa2c673f47a096d04cfefc849c999c83c6",
+      "comparison": "byte-identical to current installer"
+    },
+    {
+      "source": "source/dlls/sync/ensure_bootstrap_postupdate_sync.ps1",
+      "runtime_reference": "reference_mod/dlls/sync/ensure_bootstrap_postupdate_sync.ps1",
+      "sha256": "99fc146c44309c7562f786b83c36ef6060c16375315d62e30fd7a098961aac59",
+      "comparison": "byte-identical to current installer"
+    },
+    {
+      "source": "source/dlls/sync/live_chest_watcher.ps1",
+      "runtime_reference": "reference_mod/dlls/sync/live_chest_watcher.ps1",
+      "sha256": "a85b190c63a0124e6dec91c56671ef1397fce7b47b7d8cf5f00c0e8c4000ebb1",
+      "comparison": "byte-identical to current installer"
+    },
+    {
+      "source": "source/dlls/sync/radar_common.ps1",
+      "runtime_reference": "reference_mod/dlls/sync/radar_common.ps1",
+      "sha256": "0537b698f7c4ddc1c81299fe58879f02366fc24abf17b1d28a50994c0e3f141f",
+      "comparison": "byte-identical to current installer"
+    },
+    {
+      "source": "source/dlls/sync/radar_language.ps1",
+      "runtime_reference": "reference_mod/dlls/sync/radar_language.ps1",
+      "sha256": "1274ea5f2cb4f2bcce60c1b6cf4d8cb68b3175e848c443391a90abea85ae4502",
+      "comparison": "byte-identical to current installer"
+    },
+    {
+      "source": "source/dlls/sync/reload_watcher.ps1",
+      "runtime_reference": "reference_mod/dlls/sync/reload_watcher.ps1",
+      "sha256": "6a9d24d0606c50b53b485ca2e1045fdf2f86d193c57c918554ac9c7c803d96c0",
+      "comparison": "byte-identical to current installer"
+    },
+    {
+      "source": "source/scripts/main.lua",
+      "runtime_reference": "reference_mod/scripts/main.lua",
+      "sha256": "79de9a21b4b22a3c001191db2fb5b1b0fd2df15705d941797ce609fcded0bffe",
+      "comparison": "byte-identical to current installer"
+    }
+  ],
+  "native_components": [
+    {
+      "file": "main.dll",
+      "path": "reference_mod/dlls/main.dll",
+      "bytes": 7168,
+      "sha256": "849dd2f38d5b8528d3d167fc03c9cf094e6d2ae0ed12e0b01cd2a0b283f3aa80",
+      "role": "retained project native loader/entry component",
+      "source_available": false,
+      "source_files": [],
+      "note": "Full source/project not located in available records."
+    },
+    {
+      "file": "main_original.dll",
+      "path": "reference_mod/dlls/main_original.dll",
+      "bytes": 660480,
+      "sha256": "7502395b6702c1f1296ac4bad1b64b4d16941e329c427519bf21c07b620ad67e",
+      "role": "MnM Radar-derived native core",
+      "source_available": false,
+      "source_files": [],
+      "note": "Original author C++ source has been requested but not received; no full source-level rebuild is available."
+    },
+    {
+      "file": "wcbridge.dll",
+      "path": "reference_mod/dlls/wcbridge.dll",
+      "bytes": 10240,
+      "sha256": "8f422e7c6856b5f5aa3658b5c5b1712c2cf9416bce59d91b8c1e52ecac510420",
+      "role": "retained native WorldComplete notification/count bridge",
+      "source_available": false,
+      "source_files": [],
+      "note": "Full source/project not located in available records."
+    },
+    {
+      "file": "wcxbridge.dll",
+      "path": "reference_mod/dlls/wcxbridge.dll",
+      "bytes": 74240,
+      "sha256": "eb28c34fe37cacf976b125c1d675a67f6b00912dd5edf4c57a1a17891896651e",
+      "role": "project auxiliary WorldComplete bridge, interface 2802",
+      "source_available": true,
+      "source_files": [
+        "source/native/wcxbridge.c",
+        "source/native/wcx_resolver.h"
+      ],
+      "note": "C source and resolver header are included. Stored compiled artifact matches the shipped DLL; no new Windows build is claimed."
+    },
+    {
+      "file": "dqbridge.dll",
+      "path": "reference_mod/dlls/dqbridge.dll",
+      "bytes": 7680,
+      "sha256": "33cd499a1f7b0e5836b2b12c9d6087a0c149655f73cebcab6611752a92ec2cef",
+      "role": "retained native DynamicQuest bridge",
+      "source_available": false,
+      "source_files": [],
+      "note": "Full source/project not located in available records."
+    }
+  ],
+  "native_source_sha256": {
+    "source/native/wcxbridge.c": "01249efb80f72e3bdf13ed52a477e6d7052c2b1787c3c2ddf75c086b1505fecc",
+    "source/native/wcx_resolver.h": "f5dd1e651c955f9ea57496cdcadcbb2f6862d58a95c663361d72879bf08865fd",
+    "source/native/resolver_test_api.c": "5f3d1e5302c05b498181c4c7e62909d9d10f4ce777c4963e690cfef62f03b839"
+  },
+  "full_native_project_rebuild_possible": false,
+  "ue4ss_bundled_in_review_archive": false,
+  "ue4ss_baseline_commit": "1c1a1497f942c707f47ba668db75b25e86f6c08a",
+  "ue4ss_baseline_dll_sha256": "f31188d59b34a812afc32db4b6ff0c74e1b44861d1ed7967452ee4b3b6635be1"
+}

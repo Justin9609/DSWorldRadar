@@ -1,0 +1,46 @@
+﻿DSWorldRadar 1.1 — 游戏版本与兼容信息
+
+游戏：《龙之剑：觉醒》（DragonSword: Awakening）
+平台：Steam / Windows x64
+适配游戏版本：1.1.1。
+版本来源：用户提供的 Steam 截图，10 月 15 日《更新公告 1.1.1》。
+适配基线：2026-10-15 提供的游戏运行文件。
+此日期为文件提供日期，不作为官方更新日期或游戏构建日期。
+公开补丁号依据 Steam 公告；下列指纹单独标识已复核的运行文件。
+文件版本：5.3.2.0；这是 UE 引擎版本信息，不是游戏公开补丁号。
+引擎：Unreal Engine 5.3.2；引擎构建标签：UE5-CL-0。
+运行文件：DSClient-Win64-Shipping.exe
+文件大小：164,840,344 字节
+SHA-256：7fd80ccfed75989de6598996a1852d0329f57d333b40459682441ee1ae05eeef
+
+MOD 对外版本：1.1
+游戏版本、MOD 版本及 UE4SS 版本分别记录，互不替代。
+两个安装包的雷达功能相同；包含版附带 UE4SS，不包含版使用现有兼容加载器。
+配套 UE4SS：v3.0.1 Beta #0，提交 1c1a1497f942c707f47ba668db75b25e86f6c08a。
+部分组件日志保留内部修订号 1.0.6 / 1.0.7，安装包对外版本以 VERSION.txt 为准。
+
+English
+
+DSWorldRadar 1.1 — Game version and compatibility
+Game: DragonSword: Awakening
+Platform: Steam / Windows x64
+Target game version: 1.1.1.
+Version source: user-provided Steam screenshot showing the October 15 update announcement for 1.1.1.
+Compatibility baseline: game executable supplied on 2026-10-15.
+This is the supplied-file date, not an asserted official update or build date.
+The public patch label comes from the Steam announcement;
+the fingerprint below separately identifies the reviewed executable.
+Executable file version: 5.3.2.0; this is Unreal engine version metadata,
+not the public game patch number.
+Engine: Unreal Engine 5.3.2; engine build label: UE5-CL-0.
+Executable: DSClient-Win64-Shipping.exe
+Size: 164,840,344 bytes
+SHA-256: 7fd80ccfed75989de6598996a1852d0329f57d333b40459682441ee1ae05eeef
+
+Public mod version: 1.1
+Game, mod and UE4SS versions are recorded separately.
+Both archives contain the same radar functionality. With_UE4SS includes the loader;
+Without_UE4SS uses your existing compatible installation.
+Bundled UE4SS: v3.0.1 Beta #0, commit 1c1a1497f942c707f47ba668db75b25e86f6c08a.
+Some component logs retain internal 1.0.6 / 1.0.7 revision identifiers.
+VERSION.txt identifies the public package version.

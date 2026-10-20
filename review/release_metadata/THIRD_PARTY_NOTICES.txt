@@ -1,0 +1,34 @@
+DSWorldRadar — credits and third-party notices
+
+Original radar foundation: MnM Radar by paroxis.
+
+DSWorldRadar is based on the original MnM Radar by paroxis, used with permission.
+In the correspondence supplied by the maintainer, paroxis explained that he had
+stopped playing the game and was no longer maintaining MnM Radar. He preferred
+a separate DSWorldRadar release under the new maintainer's name, with clear
+credit, rather than requiring players to install his unmaintained mod first.
+He also permitted reuse of mnm_nodes.csv and mnm_ids.csv and offered source code.
+This does not mean that source code has already been received or integrated.
+
+DSWorldRadar packaging and continued maintenance: zouzx1996.
+Please direct DSWorldRadar bug reports to the DSWorldRadar maintainer/page.
+paroxis is not presented as the maintainer or support contact for these changes.
+
+Current implementation:
+This package includes the MnM Radar-derived native core. The author offered to
+look into making the source public; it has been requested but not yet received.
+The existing native integration still uses fixed-offset access and UI patches;
+the source-level replacement requested in the correspondence is not complete.
+
+UE4SS: Narknon and RE-UE4SS contributors.
+https://github.com/UE4SS-RE/RE-UE4SS
+The With UE4SS archive contains the pinned runtime from the earlier
+project package, commit 1c1a1497f942c707f47ba668db75b25e86f6c08a.
+Upstream LICENSE and bundled notices are retained under DS/Binaries/Win64/ue4ss.
+UE4SS is a separate project; this package does not claim authorship of UE4SS.
+
+No new blanket license is being imposed on MnM Radar or third-party assets.
+The private permission is specific to this continuation. It must not be
+represented as a general permission for anyone to reupload the original mod.
+No permission to monetize or enroll reused assets in Donation Points is
+asserted by this package.

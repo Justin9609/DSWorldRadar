@@ -1,0 +1,101 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "DSWorldRadar_v1.1_Game_v1.1.1_Without_UE4SS.zip CRC",
+      "passed": true
+    },
+    {
+      "name": "DSWorldRadar_v1.1_Game_v1.1.1_Without_UE4SS.zip safe unique entries",
+      "passed": true
+    },
+    {
+      "name": "DSWorldRadar_v1.1_Game_v1.1.1_With_UE4SS.zip CRC",
+      "passed": true
+    },
+    {
+      "name": "DSWorldRadar_v1.1_Game_v1.1.1_With_UE4SS.zip safe unique entries",
+      "passed": true
+    },
+    {
+      "name": "DSWorldRadar_v1.1_Game_v1.1.1_Maintenance.zip CRC",
+      "passed": true
+    },
+    {
+      "name": "DSWorldRadar_v1.1_Game_v1.1.1_Maintenance.zip safe unique entries",
+      "passed": true
+    },
+    {
+      "name": "both public archives have identical mod payloads",
+      "passed": true
+    },
+    {
+      "name": "mod 1.1 and game 1.1.1",
+      "passed": true
+    },
+    {
+      "name": "all shipped mod metadata hashes match",
+      "passed": true
+    },
+    {
+      "name": "UE4SS runtime matches the recorded baseline hash",
+      "passed": true
+    },
+    {
+      "name": "source matches shipped bytes: dlls/sync/MnMChestSaveSync.cs",
+      "passed": true
+    },
+    {
+      "name": "source matches shipped bytes: dlls/sync/bootstrap.ps1",
+      "passed": true
+    },
+    {
+      "name": "source matches shipped bytes: dlls/sync/ensure_bootstrap_postupdate_sync.ps1",
+      "passed": true
+    },
+    {
+      "name": "source matches shipped bytes: dlls/sync/live_chest_watcher.ps1",
+      "passed": true
+    },
+    {
+      "name": "source matches shipped bytes: dlls/sync/radar_common.ps1",
+      "passed": true
+    },
+    {
+      "name": "source matches shipped bytes: dlls/sync/radar_language.ps1",
+      "passed": true
+    },
+    {
+      "name": "source matches shipped bytes: dlls/sync/reload_watcher.ps1",
+      "passed": true
+    },
+    {
+      "name": "source matches shipped bytes: scripts/main.lua",
+      "passed": true
+    },
+    {
+      "name": "all eight current runtime source files included",
+      "passed": true
+    },
+    {
+      "name": "retained WCX build artifact matches shipped WCX",
+      "passed": true
+    },
+    {
+      "name": "WCX source identifies the shipped 2802 interface",
+      "passed": true
+    },
+    {
+      "name": "four native source gaps explicitly recorded",
+      "passed": true
+    },
+    {
+      "name": "no personal saves crash dumps or runtime logs included",
+      "passed": true
+    }
+  ],
+  "new_gameplay_tests_performed": false,
+  "new_windows_dll_rebuild_performed": false,
+  "runtime_source_file_count": 8,
+  "native_source_gap_count": 4
+}

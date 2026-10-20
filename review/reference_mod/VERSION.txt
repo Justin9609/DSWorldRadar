@@ -1,0 +1,17 @@
+﻿DSWorldRadar v1.1
+游戏 / Game: 龙之剑：觉醒 / DragonSword: Awakening
+平台 / Platform: Steam / Windows x64
+游戏适配基线 / Game compatibility baseline: executable supplied on 2026-10-15
+适配游戏版本 / Target game version: 1.1.1 (Steam update announcement, October 15)
+运行文件 SHA-256 / Executable SHA-256: 7fd80ccfed75989de6598996a1852d0329f57d333b40459682441ee1ae05eeef
+引擎 / Engine: Unreal Engine 5.3.2 (not the public game patch number)
+UE4SS: v3.0.1 Beta #0 / commit 1c1a1497
+
+Languages: ko, en, ja, zh-cn, zh-tw, de, fr, es, pt-br, ru, th
+Exploration chests: 1503
+Local quests: 147
+Minigames: 84
+Puzzles: 78
+
+See README_DSWorldRadar_ZH_CN.txt / README_DSWorldRadar_EN.txt for installation.
+Original radar foundation: MnM Radar by paroxis, used with permission.
